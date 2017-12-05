@@ -169,11 +169,11 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 	}
 
 	if (rkInput.keyDown(Input::KEY_K)){
-		root->getChildNode("group1")->ScaleAll(-0.05f,-0.05f,-0.05f);
+		root->getChildNode("Group001")->ScaleAll(-0.05f,-0.05f,-0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_L)){
-		root->getChildNode("group1")->ScaleAll(0.05f, 0.05f, 0.05f);
+		root->getChildNode("Group001")->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_Z)){
@@ -207,7 +207,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_DOWN)){
 
 			/*gameCamera->fly(-fSpeed);*/
-			root->getChildNode("group1")->getChildMesh("Teapot001")->ScaleY(-1.00f);
+			root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(-1.00f);
 
 			//if (!rkInput.keyDown(Input::KEY_UP)){
 			//	Ymove -= fSpeed;
@@ -221,7 +221,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 			/*gameCamera->fly(fSpeed);*/
 
-			root->getChildNode("group1")->getChildMesh("Teapot001")->ScaleY(1.00f);
+			root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(1.00f);
 
 			//if (!rkInput.keyDown(Input::KEY_DOWN)){
 			//	Ymove += fSpeed;
@@ -235,7 +235,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 			/*gameCamera->strafe(fSpeed);*/
 
-			root->getChildNode("group1")->getChildMesh("Teapot001")->MoveX(1.00f);
+			root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(1.00f);
 
 			//if (!rkInput.keyDown(Input::KEY_LEFT)){
 			//	playerChar.setScale(scalex, scaley);
@@ -250,7 +250,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 			/*gameCamera->strafe(-fSpeed);*/
 
-			root->getChildNode("group1")->getChildMesh("Teapot001")->MoveX(-1.00f);
+			root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(-1.00f);
 
 			//if (!rkInput.keyDown(Input::KEY_RIGHT)){
 			//	playerChar.setScale(-scalex, scaley);
@@ -263,22 +263,22 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 		if (rkInput.keyDown(Input::KEY_W)){
 			//gameCamera->walk(fSpeed);
-			root->getChildNode("group1")->MoveY(1.00f);
+			root->getChildNode("Group001")->MoveY(1.00f);
 		}
 
 		if (rkInput.keyDown(Input::KEY_S)){
 			//gameCamera->walk(-fSpeed);
-			root->getChildNode("group1")->MoveY(-1.00f);
+			root->getChildNode("Group001")->MoveY(-1.00f);
 		}
 
 		if (rkInput.keyDown(Input::KEY_D)){
 			//gameCamera->strafe(fSpeed);
-			root->getChildNode("group1")->MoveX(1.00f);
+			root->getChildNode("Group001")->MoveX(1.00f);
 		}
 
 		if (rkInput.keyDown(Input::KEY_A)){
 			//gameCamera->strafe(-fSpeed);
-			root->getChildNode("group1")->MoveX(-1.00f);
+			root->getChildNode("Group001")->MoveX(-1.00f);
 		}
 
 		if (rkInput.keyDown(Input::KEY_Q)){

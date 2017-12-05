@@ -1,4 +1,10 @@
-﻿  EngineTest.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
-  Pacman.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+﻿  Pacman.cpp
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
+     Creando biblioteca C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineTest.lib y objeto C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineTest.exp
+  Generando código
+  1 of 181 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  EngineTest.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineTest.exe
+  EngineTest.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineTest.pdb (Full PDB)

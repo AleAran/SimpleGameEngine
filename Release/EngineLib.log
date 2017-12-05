@@ -1,38 +1,35 @@
 ﻿  BoundingVolumes.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Animation.cpp
   Camera.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   DirectInput.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   Engine.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   Entity2D.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   Entity3D.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Game.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   ImporterPG2.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Input.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   Mesh.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Node.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   pg2_indexbuffer.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   pg2_vertexbuffer.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Timer.cpp
   Quad.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   Renderer.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
   Sprite.cpp
-c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\Entity2D.h(27): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'Entity2D::CollisionResult' cuando no hay ninguna variable declarada
   TinyXML2.cpp
   VertexBuffer2D.cpp
   Compilando...
   WindowLib.cpp
+     Creando biblioteca C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.lib y objeto C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.exp
+  Generando código
+  All 872 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  EngineLib.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.dll
+  EngineLib.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.pdb (Full PDB)
