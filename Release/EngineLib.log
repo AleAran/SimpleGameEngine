@@ -1,0 +1,38 @@
+﻿  BoundingVolumes.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Animation.cpp
+  Camera.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  DirectInput.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Engine.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Entity2D.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Entity3D.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Game.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  ImporterPG2.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Input.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Mesh.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Node.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  pg2_indexbuffer.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  pg2_vertexbuffer.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Timer.cpp
+  Quad.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Renderer.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  Sprite.cpp
+c:\users\ale_a\desktop\tpg2-bvh\tpg2-bvh\enginelib\Renderer.h(5): fatal error C1083: No se puede abrir el archivo incluir: 'd3dx9math.h': No such file or directory
+  TinyXML2.cpp
+  VertexBuffer2D.cpp
+  Compilando...
+  WindowLib.cpp
