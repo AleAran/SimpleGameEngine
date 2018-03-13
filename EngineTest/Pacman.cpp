@@ -21,24 +21,14 @@ bool Pacman::init(Renderer& rkRenderer){
 	if (!imp->importScene("Assets/sample_scene.3ds", *root))
 		return false;
 
-	//Texture puto = rkRenderer.loadTexture("Assets/TexturesCom_Cliffs0180_1_seamless_S.jpg");
-	/*meshy.setTextureId(0, puto);
 
-	meshy.setScale(0.01f, 0.01f, 0.01f);
-	meshy.setPos(0.0f, 0.0f, 0.0f);
-
-	meshy2.setScale(0.05f, 0.05f, 0.05f);
-	meshy2.setPos(3.0f, 0.0f, 0.0f);
-
-	meshy3.setScale(0.5f, 0.5f, 0.5f);
-	meshy3.setPos(-3.0f, 0.0f, 0.0f);*/
 
 	/*root.addChild(&meshy3);
 	root.addChild(&node1);
 	node1.addChild(&meshy);
 	node1.addChild(&meshy2);*/
 
-	//TexVertex meshVertex[] = {buttsecks
+	//TexVertex meshVertex[] = {hhh
 	//	{ -3.0f, 3.0f, -3.0f, 0.0f, 0.0f, },
 	//	{ 3.0f, 3.0f, -3.0f, 0.0f, 0.0f, },
 	//	{ -3.0f, -3.0f, -3.0f, 0.0f, 0.0f, },
