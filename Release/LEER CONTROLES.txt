@@ -1,0 +1,16 @@
+CAMARA:
+F - G - H - T -> mover
+Space -> Arriba
+Ctrl -> Abajo
+Q y R -> Rotacion
+
+OBJETOS:
+Flechas -> manipulacion tentera (Grupo2).
+W - A - S - D -> Manipulacion Grupo 1.
+K y L -> Escala grupo 1
+X y Z -> Escala todos
+
+AVISO:
+La demo busca no renderizar objetos que estan fuera del campo de visión.
+Si la pantalla esta en negro, lo mas probable es que este dentro de uno de los objetos.
+Con moverse del lugar, se soluciona.
