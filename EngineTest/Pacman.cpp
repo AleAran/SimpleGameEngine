@@ -2,6 +2,16 @@
 
 bool Pacman::init(Renderer& rkRenderer){
 
+
+
+	imp = new ImporterPG2(rkRenderer);
+	root = new Node();
+
+	if (!imp->importScene("Assets/demo.dae", *root))
+		return false;
+
+
+#pragma region oldStuffFromBeforeAssImp
 	//meshy.setRenderer(rkRenderer);
 	//meshy2.setRenderer(rkRenderer);
 	//meshy3.setRenderer(rkRenderer);
@@ -14,14 +24,6 @@ bool Pacman::init(Renderer& rkRenderer){
 
 	//if (!imp.importMesh("Assets/Cube.obj", meshy3))
 	//	return false;
-
-	imp = new ImporterPG2(rkRenderer);
-	root = new Node();
-
-	if (!imp->importScene("Assets/sample_scene.3ds", *root))
-		return false;
-
-
 
 	/*root.addChild(&meshy3);
 	root.addChild(&node1);
@@ -99,6 +101,7 @@ bool Pacman::init(Renderer& rkRenderer){
 
 	if (!m.import("Assets/mm1map.tmx", rkRenderer))
 	return false;*/
+#pragma endregion
 
 	camSpeedDivider = 1000.0f;
 	gameCamera = new Camera(rkRenderer);
@@ -158,12 +161,12 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		gameCamera->fly(fSpeed);
 	}
 
-	if (rkInput.keyDown(Input::KEY_K)){
-		root->getChildNode("Group001")->ScaleAll(-0.05f,-0.05f,-0.05f);
-	}
+	//if (rkInput.keyDown(Input::KEY_K)){
+	//	root->getChildNode("Root")->ScaleAll(-0.05f,-0.05f,-0.05f);
+	//}
 
 	if (rkInput.keyDown(Input::KEY_L)){
-		root->getChildNode("Group001")->ScaleAll(0.05f, 0.05f, 0.05f);
+		root->getChildNode("TestAssetsPlane.obj")->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_Z)){
@@ -174,102 +177,56 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		root->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
-	//playerChar.draw(pkRenderer);
-	//playerChar.update(rkTimer);
 
-	//Xmove = playerChar.posX();
-	//Ymove = playerChar.posY();
-
-	//if (!(rkInput.keyDown(Input::KEY_LEFT)) && !(rkInput.keyDown(Input::KEY_RIGHT)) &&
-	//	!(rkInput.keyDown(Input::KEY_UP)) && !(rkInput.keyDown(Input::KEY_DOWN))){
-	//	if (!isItSet){
-	//		movingH = false;
-	//		movingV = false;
-	//		playerChar.setAnimation(idle);
-	//		isItSet = true;
-	//	}
-	//}
 
 	if (!isColliding){
 
 		pkRenderer.drawText(showMe);
 		showMe = "";
-		if (rkInput.keyDown(Input::KEY_DOWN)){
+		//if (rkInput.keyDown(Input::KEY_DOWN)){
 
-			/*gameCamera->fly(-fSpeed);*/
-			root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(-1.00f);
+		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(-1.00f);
 
-			//if (!rkInput.keyDown(Input::KEY_UP)){
-			//	Ymove -= fSpeed;
-			//	playerChar.setAnimation(jumping);
-			//	isItSet = false;
-			//	movingV = true;
-			//}
-		}
+		//}
 
 		if (rkInput.keyDown(Input::KEY_UP)){
 
-			/*gameCamera->fly(fSpeed);*/
 
-			root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(1.00f);
+			root->getChildNode("TestAssetsPlane.obj")->getChildMesh("Plane01")->ScaleY(1.00f);
 
-			//if (!rkInput.keyDown(Input::KEY_DOWN)){
-			//	Ymove += fSpeed;
-			//	playerChar.setAnimation(jumping);
-			//	isItSet = false;
-			//	movingV = true;
-			//}
+
 		}
 
-		if (rkInput.keyDown(Input::KEY_RIGHT)){
+		//if (rkInput.keyDown(Input::KEY_RIGHT)){
 
-			/*gameCamera->strafe(fSpeed);*/
 
-			root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(1.00f);
+		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(1.00f);
+		//}
 
-			//if (!rkInput.keyDown(Input::KEY_LEFT)){
-			//	playerChar.setScale(scalex, scaley);
-			//	Xmove += fSpeed;
-			//	playerChar.setAnimation(walking);
-			//	isItSet = false;
-			//	movingH = true;
-			//}
-		}
+		//if (rkInput.keyDown(Input::KEY_LEFT)){
 
-		if (rkInput.keyDown(Input::KEY_LEFT)){
 
-			/*gameCamera->strafe(-fSpeed);*/
 
-			root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(-1.00f);
+		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(-1.00f);
 
-			//if (!rkInput.keyDown(Input::KEY_RIGHT)){
-			//	playerChar.setScale(-scalex, scaley);
-			//	Xmove -= fSpeed;
-			//	playerChar.setAnimation(walking);
-			//	isItSet = false;
-			//	movingH = true;
-			//}
-		}
 
-		if (rkInput.keyDown(Input::KEY_W)){
-			//gameCamera->walk(fSpeed);
-			root->getChildNode("Group001")->MoveY(1.00f);
-		}
+		//}
 
-		if (rkInput.keyDown(Input::KEY_S)){
-			//gameCamera->walk(-fSpeed);
-			root->getChildNode("Group001")->MoveY(-1.00f);
-		}
+		//if (rkInput.keyDown(Input::KEY_W)){
+		//	root->getChildNode("Group001")->MoveY(1.00f);
+		//}
 
-		if (rkInput.keyDown(Input::KEY_D)){
-			//gameCamera->strafe(fSpeed);
-			root->getChildNode("Group001")->MoveX(1.00f);
-		}
+		//if (rkInput.keyDown(Input::KEY_S)){
+		//	root->getChildNode("Group001")->MoveY(-1.00f);
+		//}
 
-		if (rkInput.keyDown(Input::KEY_A)){
-			//gameCamera->strafe(-fSpeed);
-			root->getChildNode("Group001")->MoveX(-1.00f);
-		}
+		//if (rkInput.keyDown(Input::KEY_D)){
+		//	root->getChildNode("Group001")->MoveX(1.00f);
+		//}
+
+		//if (rkInput.keyDown(Input::KEY_A)){
+		//	root->getChildNode("Group001")->MoveX(-1.00f);
+		//}
 
 		if (rkInput.keyDown(Input::KEY_Q)){
 			gameCamera->roll(0.1f);
@@ -282,24 +239,8 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		gameCamera->pitch(rkInput.mouseRelPosY() / camSpeedDivider);
 
 		gameCamera->yaw(rkInput.mouseRelPosX() / camSpeedDivider);
-
-		//if (movingV){
-		//	playerChar.setAnimation(jumping);
-		//}
-
-		//playerChar.setPos(Xmove, Ymove);
-		//m.checkCollision(playerChar, 15, 15);
 	}
 
-	//for (unsigned int i = 0; i<obstacles.size(); i++){
-	//	Entity2D& obstacle = *(obstacles[i]);
-	//	if (playerChar.checkCollision(obstacle,10,10) == Entity2D::Collision){
-	//		isColliding = true;
-	//		playerChar.returnToPos(playerChar.previousPosX(), playerChar.previousPosY());
-	//	}else{
-	//		isColliding = false;
-	//	}
-	//}
 }
 
 void Pacman::deinit(){
