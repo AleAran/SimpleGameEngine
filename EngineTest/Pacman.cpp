@@ -7,7 +7,7 @@ bool Pacman::init(Renderer& rkRenderer){
 	imp = new ImporterPG2(rkRenderer);
 	root = new Node();
 
-	if (!imp->importScene("Assets/Bae.dae", *root, bspMan))
+	if (!imp->importScene("Assets/elmenemovil.3ds", *root, bspMan))
 		return false;
 
 
@@ -135,7 +135,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		nameVector->clear();
 
 	root->updateBV();
-	root->draw(pkRenderer, gameCamera->getFrustum().aabbInFrustum(root->getAABB()),gameCamera->getFrustum(), *nameVector);
+	root->draw(pkRenderer, gameCamera->getFrustum().aabbInFrustum(root->getAABB()),gameCamera->getFrustum(), *nameVector,gameCamera->getPos(),bspMan);
 
 	if (rkInput.keyDown(Input::KEY_F)){
 		gameCamera->strafe(-fSpeed);;
@@ -166,7 +166,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 	//}
 
 	if (rkInput.keyDown(Input::KEY_L)){
-		root->getChildNode("demo")->ScaleAll(0.05f, 0.05f, 0.05f);
+		root->getChildNode("Root")->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_Z)){
@@ -192,25 +192,25 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_UP)){
 
 
-			root->getChildMesh("Plane001")->ScaleY(1.00f);
+			root->getChildMesh("Control")->ScaleY(1.00f);
 
 
 		}
 
-		//if (rkInput.keyDown(Input::KEY_RIGHT)){
+		if (rkInput.keyDown(Input::KEY_RIGHT)) {
 
 
-		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(1.00f);
-		//}
+			root->getChildNode("Root")->getChildNode("group6")->getChildMesh("Control")->MoveX(1.00f);
 
-		//if (rkInput.keyDown(Input::KEY_LEFT)){
-
-
-
-		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->MoveX(-1.00f);
+		}
+		if (rkInput.keyDown(Input::KEY_LEFT)){
 
 
-		//}
+
+			root->getChildNode("Root")->getChildNode("group6")->getChildMesh("Control")->MoveX(-1.00f);
+
+
+		}
 
 		//if (rkInput.keyDown(Input::KEY_W)){
 		//	root->getChildNode("Group001")->MoveY(1.00f);

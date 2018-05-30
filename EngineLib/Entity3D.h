@@ -51,9 +51,9 @@ class Entity3D{
 		DllExport float previousPosZ() const;
 		DllExport void returnToPos(float fPosX, float fPosY, float fPosZ);
 
-		DllExport virtual void draw(vector<string>& vec) = 0;
+		DllExport virtual void draw(vector<string>& vec,  D3DXVECTOR3 camPos, BSPManager& bsp) = 0;
 		DllExport virtual void draw(Renderer& rkRenderer, CollisionResult eParentResult, 
-									const Frustum& rkFrustum, vector<string>& vec) = 0;
+									const Frustum& rkFrustum, vector<string>& vec,  D3DXVECTOR3 camPos, BSPManager& bsp) = 0;
 
 		DllExport const AABB& getAABB() const;
 		DllExport virtual void updateBV() = 0;

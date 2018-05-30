@@ -20,6 +20,7 @@ class Camera{
 		DllExport void fly(float dist);
 
 		DllExport void setPos(float fPosX, float fPosY, float fPosZ);
+		DllExport D3DXVECTOR3 getPos();
 		DllExport void setForward(float fX, float fY, float fZ);
 		DllExport const Matrix& viewMatrix() const;
 
