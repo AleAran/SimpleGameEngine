@@ -7,7 +7,7 @@ bool Pacman::init(Renderer& rkRenderer){
 	imp = new ImporterPG2(rkRenderer);
 	root = new Node();
 
-	if (!imp->importScene("Assets/elmenemovil.3ds", *root, bspMan))
+	if (!imp->importScene("Assets/Bae.dae", *root, bspMan))
 		return false;
 
 
