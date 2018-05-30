@@ -78,6 +78,12 @@
     <ClCompile Include="BoundingVolumes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BPlane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BSPManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Input.h">
@@ -141,6 +147,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BoundingVolumes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BPlane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BSPManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -46,6 +46,8 @@ class Pacman : public Game{
 		ImporterPG2* imp;
 		string showMe;
 		vector<string>* nameVector = new vector<string>();
+
+		BSPManager bspMan;
 };
 
 #endif
