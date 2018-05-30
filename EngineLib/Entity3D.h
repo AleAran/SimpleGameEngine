@@ -3,6 +3,7 @@
 
 #include "Renderer.h"
 #include "BoundingVolumes.h"
+#include "BSPManager.h"
 
 class Node;
 

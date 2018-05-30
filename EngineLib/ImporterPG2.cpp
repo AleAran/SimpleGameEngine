@@ -15,7 +15,7 @@ ImporterPG2::~ImporterPG2(){
 	m_Textures.clear();
 }
 
-bool ImporterPG2::importScene(const std::string& rkFilename, Node& orkSceneRoot){
+bool ImporterPG2::importScene(const std::string& rkFilename, Node& orkSceneRoot, BSPManager& bspMan){
 	
 	Importer importer;
 	aiString* path = new aiString;
@@ -48,13 +48,13 @@ bool ImporterPG2::importScene(const std::string& rkFilename, Node& orkSceneRoot)
 	orkSceneRoot.setName(iRoot->mName.C_Str());
 
 	for (unsigned int i = 0; i < iRoot->mNumChildren; i++){
-		importNode(iRoot->mChildren[i], orkSceneRoot, scene);
+		importNode(iRoot->mChildren[i], orkSceneRoot, scene, bspMan);
 	}
 
 	return true;
 }
 
-void ImporterPG2::importNode(aiNode* child, Node& parent, const aiScene* scene){
+void ImporterPG2::importNode(aiNode* child, Node& parent, const aiScene* scene, BSPManager& bspMan){
 	
 	aiVector3t<float> position;
 	aiQuaterniont<float> rotation;
@@ -71,7 +71,7 @@ void ImporterPG2::importNode(aiNode* child, Node& parent, const aiScene* scene){
 		newNode->setName(child->mName.C_Str());
 
 		for (unsigned int k = 0; k < child->mNumChildren; k++){
-			importNode(child->mChildren[k], *newNode, scene);
+			importNode(child->mChildren[k], *newNode, scene, bspMan);
 		}
 
 		parent.addChild(newNode);
@@ -131,7 +131,23 @@ void ImporterPG2::importNode(aiNode* child, Node& parent, const aiScene* scene){
 			indices, rootMesh->mNumFaces * 3);
 
 		parent.addChild(newMesh);
-		
+		string debugName = child->mName.C_Str();
+		size_t findP = debugName.find("Plane");
+
+		if (findP != string::npos) {
+
+			D3DXVECTOR3 planeVerts[3];
+
+
+				for (unsigned int i = 0; i < 3; i++) {
+					planeVerts[i].x = rootMesh->mVertices[i].x + newMesh->posX();
+					planeVerts[i].y = rootMesh->mVertices[i].y + newMesh->posY();
+					planeVerts[i].z = rootMesh->mVertices[i].z + newMesh->posZ();
+				}
+
+				bspMan.AddPlane(planeVerts[0], planeVerts[1], planeVerts[2]);
+			
+		}
 		delete[] meshVertex;
 		meshVertex = NULL;
 	}

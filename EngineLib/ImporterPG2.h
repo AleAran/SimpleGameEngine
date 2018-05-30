@@ -15,10 +15,10 @@ class ImporterPG2{
 	public:
 		DllExport ImporterPG2(Renderer& rkRenderer);
 		DllExport ~ImporterPG2();
-		DllExport bool importScene(const std::string& rkFilename, Node& orkSceneRoot);
+		DllExport bool importScene(const std::string& rkFilename, Node& orkSceneRoot, BSPManager& bspMan);
 
 	private:
-		DllExport void importNode(aiNode* child, Node& parent, const aiScene* scene);
+		DllExport void importNode(aiNode* child, Node& parent, const aiScene* scene, BSPManager& bspMan);
 
 		vector <Texture> m_Textures;
 		Renderer& importRenderer;

@@ -7,7 +7,7 @@ bool Pacman::init(Renderer& rkRenderer){
 	imp = new ImporterPG2(rkRenderer);
 	root = new Node();
 
-	if (!imp->importScene("Assets/demo.dae", *root))
+	if (!imp->importScene("Assets/Bae.dae", *root, bspMan))
 		return false;
 
 
@@ -166,7 +166,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 	//}
 
 	if (rkInput.keyDown(Input::KEY_L)){
-		root->getChildNode("TestAssetsPlane.obj")->ScaleAll(0.05f, 0.05f, 0.05f);
+		root->getChildNode("demo")->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_Z)){
@@ -192,7 +192,7 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_UP)){
 
 
-			root->getChildNode("TestAssetsPlane.obj")->getChildMesh("Plane01")->ScaleY(1.00f);
+			root->getChildMesh("Plane001")->ScaleY(1.00f);
 
 
 		}
