@@ -124,6 +124,10 @@ void Camera::setPos(float fPosX, float fPosY, float fPosZ){
 	UpdateCam();
 }
 
+D3DXVECTOR3 Camera::getPos() {
+	return m_position;
+}
+
 void Camera::setForward(float fX, float fY, float fZ){
 	m_lookAt.x = fX;
 	m_lookAt.y = fY;
