@@ -1,10 +1,9 @@
-﻿  ImporterPG2.cpp
-c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\BPlane.h(12): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'BPlane' cuando no hay ninguna variable declarada
+﻿  Mesh.cpp
+c:\users\ale_a\onedrive\documents\github\ejemplo-c-motorgrafico\enginelib\bplane.h(12): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'BPlane' cuando no hay ninguna variable declarada
      Creando biblioteca C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.lib y objeto C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.exp
   Generando código
-  2 of 948 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  1 of 905 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Generación de código finalizada
   EngineLib.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.dll
-  EngineLib.vcxproj -> C:\Users\ale_a\OneDrive\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.pdb (Full PDB)

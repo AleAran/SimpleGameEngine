@@ -36,11 +36,12 @@ class Camera{
 
 		D3DXVECTOR3 m_right;
 		D3DXVECTOR3 m_up;
-		D3DXVECTOR3 m_forward;
 		D3DXVECTOR3 m_position;
 		D3DXVECTOR3 m_lookAt;
+		D3DXVECTOR3 m_look;
 
 		float m_pitch;
+		float m_yaw;
 
 		float m_maxPitch;
 		BOOL  m_invertY;

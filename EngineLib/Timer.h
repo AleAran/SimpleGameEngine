@@ -17,9 +17,9 @@ public:
 
 	float timeBetweenFrames () const;
 	unsigned int fps () const;
-
-private:
 	double m_dTimeBetweenFrames;
+private:
+	//double m_dTimeBetweenFrames;
 	double m_dMeasureFpsSample;
 	unsigned int m_uiFPS;
 	unsigned int m_uiFrameCounter;

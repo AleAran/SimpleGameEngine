@@ -7,7 +7,7 @@ bool Pacman::init(Renderer& rkRenderer){
 	imp = new ImporterPG2(rkRenderer);
 	root = new Node();
 
-	if (!imp->importScene("Assets/Bae.dae", *root, bspMan))
+	if (!imp->importScene("Assets/demo.dae", *root, bspMan))
 		return false;
 
 
@@ -116,7 +116,8 @@ bool Pacman::init(Renderer& rkRenderer){
 	//meshy->setRotation(0.0f, 1.0f, 0.0f);
 	//meshy2->setPos(0.0f, 0.0f, 0.0f);
 
-	gameCamera->setPos(0.0f, 0.0f, -20.0f);
+	gameCamera->setPos(0.0f, 0.0f, -30.0f);
+//	gameCamera->setForward(0.0f, 0.0f, 0.0f);
 	return true;
 }
 
@@ -137,19 +138,19 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 	root->updateBV();
 	root->draw(pkRenderer, gameCamera->getFrustum().aabbInFrustum(root->getAABB()),gameCamera->getFrustum(), *nameVector,gameCamera->getPos(),bspMan);
 
-	if (rkInput.keyDown(Input::KEY_F)){
+	if (rkInput.keyDown(Input::KEY_A)){
 		gameCamera->strafe(-fSpeed);;
 	}
 
-	if (rkInput.keyDown(Input::KEY_G)){
+	if (rkInput.keyDown(Input::KEY_S)){
 		gameCamera->walk(-fSpeed);
 	}
 
-	if (rkInput.keyDown(Input::KEY_T)){
+	if (rkInput.keyDown(Input::KEY_W)){
 		gameCamera->walk(fSpeed);
 	}
 
-	if (rkInput.keyDown(Input::KEY_H)){
+	if (rkInput.keyDown(Input::KEY_D)){
 		gameCamera->strafe(fSpeed);
 	}
 
@@ -183,16 +184,16 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 		pkRenderer.drawText(showMe);
 		showMe = "";
-		//if (rkInput.keyDown(Input::KEY_DOWN)){
+		if (rkInput.keyDown(Input::KEY_DOWN)){
 
-		//	root->getChildNode("Group002")->getChildMesh("Teapot001")->ScaleY(-1.00f);
+			root->getChildMesh("Control")->MoveY(-1.00f);
 
-		//}
+		}
 
 		if (rkInput.keyDown(Input::KEY_UP)){
 
 
-			root->getChildMesh("Control")->ScaleY(1.00f);
+			root->getChildMesh("Control")->MoveY(1.00f);
 
 
 		}
@@ -200,14 +201,14 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_RIGHT)) {
 
 
-			root->getChildNode("Root")->getChildNode("group6")->getChildMesh("Control")->MoveX(1.00f);
+			root->getChildMesh("Control")->MoveX(1.00f);
 
 		}
 		if (rkInput.keyDown(Input::KEY_LEFT)){
 
 
 
-			root->getChildNode("Root")->getChildNode("group6")->getChildMesh("Control")->MoveX(-1.00f);
+			root->getChildMesh("Control")->MoveX(-1.00f);
 
 
 		}
@@ -235,10 +236,26 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_E)){
 			gameCamera->roll(-0.1f);
 		}
+		float timeF = rkTimer.m_dTimeBetweenFrames;
+		if (rkInput.mouseRelPosX()>0)
+		{
+			gameCamera->yaw(0.05f);
+		}
 
-		gameCamera->pitch(rkInput.mouseRelPosY() / camSpeedDivider);
+		if (rkInput.mouseRelPosY()>0)
+		{
+			gameCamera->pitch(0.05f);
+		}
 
-		gameCamera->yaw(rkInput.mouseRelPosX() / camSpeedDivider);
+		if (rkInput.mouseRelPosX()<0)
+		{
+			gameCamera->yaw(-0.05f);
+		}
+
+		if (rkInput.mouseRelPosY()<0)
+		{
+			gameCamera->pitch(-0.05f);
+		}
 	}
 
 }
