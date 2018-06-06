@@ -46,18 +46,23 @@ void Mesh::setMeshData(const TexVertex* pakVertices, D3DPRIMITIVETYPE ePrimitive
 }
 
 void Mesh::draw(vector<string>& vec, D3DXVECTOR3 camPos, BSPManager& bsp){
+	visible = bsp.CheckTree(camPos, aabb.min, aabb.max);
+	//visible = true;
+	if (visible)
+	{
+		string push;
+		push = name + "\n" + "  ";
+		vec.push_back(push);
 
-	string push;
-	push = name + "\n" + "  ";
-	vec.push_back(push);
+		meshIB->bind();
+		meshVB->bind();
 
-	meshIB->bind();
-	meshVB->bind();
+		meshRenderer->setCurrentTexture(text);
 
-	meshRenderer->setCurrentTexture(text);
+		meshRenderer->setMatrix(m_pkWorldMatrix);
+		meshRenderer->drawCurrentBuffers(meshPrimitive);
+	}
 
-	meshRenderer->setMatrix(m_pkWorldMatrix); 
-	meshRenderer->drawCurrentBuffers(meshPrimitive);
 }
 
 void Mesh::draw(Renderer& rkRenderer, CollisionResult eParentResult, const Frustum& rkFrustum, vector<string>& vec, D3DXVECTOR3 camPos, BSPManager& bsp){
