@@ -1,16 +1,13 @@
 CAMARA:
-F - G - H - T -> mover
+W A S D -> mover
 Space -> Arriba
 Ctrl -> Abajo
 Q y R -> Rotacion
 
 OBJETOS:
-Flechas -> manipulacion tentera (Grupo2).
-W - A - S - D -> Manipulacion Grupo 1.
-K y L -> Escala grupo 1
-X y Z -> Escala todos
+Flechas -> manipulacion cubo de control.
 
 AVISO:
-La demo busca no renderizar objetos que estan fuera del campo de visión.
+La demo busca no renderizar objetos usando metodo BSP + Frustum Culling.
 Si la pantalla esta en negro, lo mas probable es que este dentro de uno de los objetos.
 Con moverse del lugar, se soluciona.
