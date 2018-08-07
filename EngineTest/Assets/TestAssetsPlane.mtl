@@ -1,0 +1,63 @@
+newmtl Material__25SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT01.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__26SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT02.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__27SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT03.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__28SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT04.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__29SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT05.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__30SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT06.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
+newmtl Material__31SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PATT07.JPG
+Ni 1.00
+Ks 0.95 0.95 0.95
+Ns 18.00
