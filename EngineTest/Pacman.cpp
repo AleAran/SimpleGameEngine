@@ -7,7 +7,7 @@ bool Pacman::init(Renderer& rkRenderer){
 	imp = new ImporterPG2(rkRenderer);
 	root = new Node();
 
-	if (!imp->importScene("Assets/demo.dae", *root, bspMan))
+	if (!imp->importScene("Assets/sample_scene.3ds", *root, bspMan))
 		return false;
 
 
@@ -186,14 +186,14 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		showMe = "";
 		if (rkInput.keyDown(Input::KEY_DOWN)){
 
-			root->getChildMesh("Control")->MoveY(-1.00f);
+			root->getChildNode("Group001")->MoveY(-1.00f);
 
 		}
 
 		if (rkInput.keyDown(Input::KEY_UP)){
 
 
-			root->getChildMesh("Control")->MoveY(1.00f);
+			root->getChildNode("Group001")->MoveY(1.00f);
 
 
 		}
@@ -201,14 +201,14 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 		if (rkInput.keyDown(Input::KEY_RIGHT)) {
 
 
-			root->getChildMesh("Control")->MoveX(1.00f);
+			root->getChildNode("Group001")->MoveX(1.00f);
 
 		}
 		if (rkInput.keyDown(Input::KEY_LEFT)){
 
 
 
-			root->getChildMesh("Control")->MoveX(-1.00f);
+			root->getChildNode("Group001")->MoveX(-1.00f);
 
 
 		}
