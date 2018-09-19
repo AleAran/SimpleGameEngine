@@ -43,7 +43,7 @@ bool ImporterPG2::importScene(const std::string& rkFilename, Node& orkSceneRoot,
 	aiVector3t<float> scaleRoot;
 	iRoot->mTransformation.Decompose(scaleRoot, rotationRoot, positionRoot);
 	orkSceneRoot.setPos(positionRoot.x, positionRoot.y, positionRoot.z);
-	orkSceneRoot.setRotation(0, 0, 0);
+	orkSceneRoot.setRotation(-90, 0, 0);
 	orkSceneRoot.setScale(scaleRoot.x, scaleRoot.y, scaleRoot.z);
 	orkSceneRoot.setName(iRoot->mName.C_Str());
 
@@ -132,7 +132,7 @@ void ImporterPG2::importNode(aiNode* child, Node& parent, const aiScene* scene, 
 
 		parent.addChild(newMesh);
 		string debugName = child->mName.C_Str();
-		size_t findP = debugName.find("Plane");
+		size_t findP = debugName.find("BSPlane");
 
 		if (findP != string::npos) {
 

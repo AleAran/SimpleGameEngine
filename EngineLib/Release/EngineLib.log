@@ -1,9 +1,0 @@
-﻿  Entity3D.cpp
-c:\users\administrador\documents\github\ejemplo-c-motorgrafico\enginelib\bplane.h(12): warning C4091: '__declspec(dllexport)': se ha omitido a la izquierda de 'BPlane' cuando no hay ninguna variable declarada
-     Creando biblioteca C:\Users\Administrador\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.lib y objeto C:\Users\Administrador\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.exp
-  Generando código
-  0 of 895 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Generación de código finalizada
-  EngineLib.vcxproj -> C:\Users\Administrador\Documents\GitHub\Ejemplo-c-MotorGrafico\Release\EngineLib.dll

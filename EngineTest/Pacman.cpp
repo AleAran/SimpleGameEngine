@@ -116,19 +116,14 @@ bool Pacman::init(Renderer& rkRenderer){
 	//meshy->setRotation(0.0f, 1.0f, 0.0f);
 	//meshy2->setPos(0.0f, 0.0f, 0.0f);
 
-	gameCamera->setPos(0.0f, 0.0f, -30.0f);
-//	gameCamera->setForward(0.0f, 0.0f, 0.0f);
+	gameCamera->setPos(30.0f, 50.0f, -180.0f);
+
 	return true;
 }
 
 void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 	showMe = accumulate(begin(*nameVector), end(*nameVector), showMe);
-	/*ob1.draw(pkRenderer);
-	ob2.draw(pkRenderer);*/
 
-	//m.draw(pkRenderer, 800, 600);
-
-	//meshy->RotateY(0.1f);
 
 	gameCamera->updateFrustum();
 
@@ -160,14 +155,6 @@ void Pacman::frame(Renderer& pkRenderer, DirectInput& rkInput, Timer& rkTimer){
 
 	if (rkInput.keyDown(Input::KEY_SPACE)){
 		gameCamera->fly(fSpeed);
-	}
-
-	//if (rkInput.keyDown(Input::KEY_K)){
-	//	root->getChildNode("Root")->ScaleAll(-0.05f,-0.05f,-0.05f);
-	//}
-
-	if (rkInput.keyDown(Input::KEY_L)){
-		root->getChildNode("Root")->ScaleAll(0.05f, 0.05f, 0.05f);
 	}
 
 	if (rkInput.keyDown(Input::KEY_Z)){
