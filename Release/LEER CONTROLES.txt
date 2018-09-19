@@ -4,8 +4,7 @@ Space -> Arriba
 Ctrl -> Abajo
 Q y R -> Rotacion
 
-OBJETOS:
-Flechas -> manipulacion cubo de control.
+
 
 AVISO:
 La demo busca no renderizar objetos usando metodo BSP + Frustum Culling.
