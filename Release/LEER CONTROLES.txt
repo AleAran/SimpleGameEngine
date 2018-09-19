@@ -4,9 +4,11 @@ Space -> Arriba
 Ctrl -> Abajo
 Q y R -> Rotacion
 
-
+Objetos:
+Flechas -> Mover Grupo/Objeto Control
+Z/X -> Escala
 
 AVISO:
-La demo busca no renderizar objetos usando metodo BSP + Frustum Culling.
+La demo busca no renderizar objetos usando metodo Frustum Culling.
 Si la pantalla esta en negro, lo mas probable es que este dentro de uno de los objetos.
 Con moverse del lugar, se soluciona.
